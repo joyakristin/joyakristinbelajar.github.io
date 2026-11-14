@@ -1,169 +1,61 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Petualangan Bentuk Aljabar</title>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Materi Lengkap Bentuk Aljabar</title>
 <style>
-:root{--navy:#18234a;--purple:#7057d9;--pink:#ff6b9a;--mint:#5ed6b3;--yellow:#ffd166;--paper:#f6f7ff;--ink:#263052}
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(135deg,#e8e9ff,#fff0f5 55%,#e7fff8);min-height:100vh}
-header{padding:30px 18px 24px;text-align:center;color:white;background:linear-gradient(120deg,#5141b8,#8a5be8 60%,#e66d9d);border-radius:0 0 32px 32px}
-header .eyebrow{font-size:.85rem;letter-spacing:2px;font-weight:800;opacity:.9}
-h1{font-size:clamp(2rem,5vw,3.2rem);margin:8px 0}
-header p{margin:0 auto;max-width:680px;line-height:1.6}
-main{max-width:1000px;margin:24px auto;padding:0 16px 40px}
-nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:18px 0 24px}
-.tab{border:0;border-radius:999px;padding:11px 18px;font-weight:800;background:white;color:#5748a7;box-shadow:0 4px 12px #4d43851c;cursor:pointer}
-.tab.active{background:var(--navy);color:white}
-.panel{display:none}.panel.active{display:block}
-.card{background:#ffffffed;border:1px solid #ffffff;border-radius:22px;padding:22px;margin:14px 0;box-shadow:0 10px 30px #403a7410}
-.card h2{margin:0 0 12px;color:#4d3da8}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px}
-.mini{background:#f2f0ff;border-radius:16px;padding:16px}
-.mini:nth-child(2){background:#fff0f5}.mini:nth-child(3){background:#eafff7}
-.mini h3{margin:0 0 7px}.mini p{margin:0;line-height:1.5}
-.math{font-size:1.35rem;font-weight:900;color:#4d3da8;letter-spacing:.3px}
-.note{padding:13px 16px;background:#fff8df;border-left:5px solid var(--yellow);border-radius:12px;line-height:1.55}
-.example{background:#f7f8ff;border-radius:14px;padding:14px;margin:10px 0;line-height:1.65}
-.pill{display:inline-block;padding:5px 10px;border-radius:99px;background:#eae6ff;color:#5748a7;font-size:.82rem;font-weight:800}
-.game-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
-.stats{display:flex;gap:9px;flex-wrap:wrap}.stat{background:#f0efff;padding:9px 13px;border-radius:12px;font-weight:800}
-.progress{height:10px;background:#ecebfa;border-radius:20px;overflow:hidden;margin:15px 0 20px}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--purple));transition:width .3s}
-.question{font-size:1.3rem;font-weight:850;line-height:1.5;margin:12px 0 18px}
-.answers{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-.answer{border:2px solid #e7e5f7;background:white;border-radius:14px;padding:14px;text-align:left;font-weight:750;font-size:1rem;cursor:pointer;color:var(--ink);transition:.15s}
-.answer:hover{border-color:var(--purple);transform:translateY(-2px)}
-.answer:disabled{cursor:default;transform:none}.answer.correct{background:#e5fff4;border-color:#39b88f}.answer.wrong{background:#fff0f2;border-color:#f16b85}
-.feedback{min-height:52px;padding:12px;border-radius:13px;margin:14px 0;line-height:1.5;background:#f5f4ff}
-.controls{display:flex;gap:10px;flex-wrap:wrap}
-button.primary{background:var(--purple);color:white;border:0;border-radius:13px;padding:12px 18px;font-weight:850;cursor:pointer}
-button.secondary{background:#f0efff;color:#5141a8;border:0;border-radius:13px;padding:12px 18px;font-weight:850;cursor:pointer}
-button:disabled{opacity:.45;cursor:not-allowed}
-#result{text-align:center}.bigscore{font-size:3rem;font-weight:950;color:var(--purple);margin:6px}
-footer{text-align:center;color:#6b6d88;font-size:.88rem;padding:10px}
-@media(max-width:560px){.answers{grid-template-columns:1fr}.card{padding:17px}.question{font-size:1.15rem}}
-</style>
-</head>
-<body>
-<header>
-  <div class="eyebrow">MISI MATEMATIKA • KELAS VII SMP</div>
-  <h1>🚀 Petualangan Bentuk Aljabar</h1>
-  <p>Kenali variabel, koefisien, konstanta, dan suku. Setelah itu, uji kemampuanmu lewat kuis tebak-tebakan!</p>
-</header>
-<main>
-<nav>
-  <button class="tab active" data-tab="materi">📚 Belajar Dulu</button>
-  <button class="tab" data-tab="contoh">🧩 Contoh Seru</button>
-  <button class="tab" data-tab="game">🎮 Mulai Kuis</button>
-</nav>
+:root{--p:#5946b8;--ink:#20294a;--line:#e3e5f0}*{box-sizing:border-box}body{margin:0;background:#f6f7fc;color:var(--ink);font:16px/1.65 Arial,sans-serif}header{background:linear-gradient(120deg,#302b75,#7563d2);color:white;text-align:center;padding:38px 18px}header h1{font-size:clamp(30px,5vw,44px);margin:8px}header p{max-width:760px;margin:auto}.wrap{max-width:980px;margin:22px auto;padding:0 15px 40px}nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}nav a{background:white;color:var(--p);border:1px solid var(--line);border-radius:30px;padding:7px 12px;text-decoration:none;font-weight:bold;font-size:14px}.card{background:white;border:1px solid var(--line);border-radius:17px;padding:21px;margin:15px 0;box-shadow:0 5px 18px #252c5510}h2{color:var(--p);margin:0 0 12px}h3{color:#343d69;margin:18px 0 7px}.math{font-family:Georgia,serif;font-weight:bold;color:#30276f;background:#f1efff;padding:2px 6px;border-radius:5px}.box{padding:13px 16px;background:#f1efff;border-left:5px solid var(--p);border-radius:10px;margin:12px 0}.green{background:#e9fbf3;border-color:#36a77a}.gold{background:#fff7df;border-color:#e4b544}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}.tile{padding:14px;border-radius:13px;background:#f1efff}.tile:nth-child(2){background:#eaf4ff}.tile:nth-child(3){background:#e9fbf3}.tile:nth-child(4){background:#fff7df}table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid var(--line);padding:9px;text-align:left}th{background:#f1efff}details{border:1px solid var(--line);border-radius:11px;margin:11px 0;overflow:hidden}summary{cursor:pointer;background:#f3f1ff;padding:12px 15px;color:#44358f;font-weight:bold}.inside{padding:4px 15px 14px}.solution{background:#f8f9ff;border:1px dashed #c7c3e7;border-radius:10px;padding:12px;margin:10px 0}button{border:0;border-radius:9px;background:var(--p);color:white;padding:10px 15px;font-weight:bold;cursor:pointer}.light{background:#ece9ff;color:#44358f}.quizq{padding:13px;border:1px solid var(--line);border-radius:12px;margin:12px 0}.options{display:flex;gap:14px;flex-wrap:wrap;margin:9px 0}.result{display:none;background:#e9fbf3;padding:10px;border-radius:9px;margin:8px 0}footer{text-align:center;color:#69708b;font-size:14px;padding:20px}@media(max-width:600px){.card{padding:15px}table{font-size:13px}td,th{padding:6px}}@media print{nav,button{display:none}details .inside{display:block}}
+</style></head><body>
+<header><div>BAHAN AJAR MATEMATIKA • KELAS VII SMP</div><h1>BENTUK ALJABAR</h1><p>Materi, contoh soal, latihan bertahap, dan pembahasan lengkap untuk membantu memahami bentuk aljabar.</p></header>
+<div class="wrap">
+<nav><a href="#tujuan">Tujuan</a><a href="#materi">Materi</a><a href="#operasi">Operasi</a><a href="#contoh">Contoh</a><a href="#latihan">Latihan</a><a href="#kuis">Kuis</a></nav>
 
-<section id="materi" class="panel active">
- <div class="card">
-  <h2>🔎 Apa itu bentuk aljabar?</h2>
-  <p>Bentuk aljabar adalah bentuk matematika yang memuat <b>angka</b>, <b>variabel</b>, dan operasi hitung. Variabel adalah huruf yang mewakili suatu bilangan yang belum diketahui atau dapat berubah.</p>
-  <div class="example"><span class="math">3x + 5</span><br>Artinya: 3 dikalikan suatu bilangan <b>x</b>, kemudian ditambah 5.</div>
-  <div class="note">💡 Ingat! Huruf dalam aljabar bukan hiasan. Huruf tersebut mewakili bilangan.</div>
- </div>
- <div class="card">
-  <h2>🧠 Kenali bagian-bagiannya</h2>
-  <div class="grid">
-   <div class="mini"><h3>🔤 Variabel</h3><p>Huruf yang mewakili bilangan.</p><p class="math">4<strong>x</strong> + 7</p><p>Variabelnya adalah <b>x</b>.</p></div>
-   <div class="mini"><h3>✖️ Koefisien</h3><p>Angka yang mengalikan variabel.</p><p class="math"><strong>4</strong>x + 7</p><p>Koefisien x adalah <b>4</b>.</p></div>
-   <div class="mini"><h3>🔢 Konstanta</h3><p>Bilangan yang tidak memuat variabel.</p><p class="math">4x + <strong>7</strong></p><p>Konstantanya adalah <b>7</b>.</p></div>
-   <div class="mini"><h3>🧱 Suku</h3><p>Bagian bentuk aljabar yang dipisahkan oleh tanda + atau −.</p><p class="math">4x + 7</p><p>Sukunya: <b>4x</b> dan <b>7</b>.</p></div>
-  </div>
- </div>
- <div class="card">
-  <h2>📦 Jenis bentuk aljabar berdasarkan suku</h2>
-  <div class="grid">
-   <div class="mini"><h3>Monomial (1 suku)</h3><p class="math">5a</p><p>Contoh: 5a</p></div>
-   <div class="mini"><h3>Binomial (2 suku)</h3><p class="math">x + 3</p><p>Contoh: x + 3</p></div>
-   <div class="mini"><h3>Trinomial (3 suku)</h3><p class="math">2p + q − 4</p><p>Contoh: 2p + q − 4</p></div>
-  </div>
-  <p class="note">Catatan: Suku sejenis memiliki variabel dan pangkat variabel yang sama. Contoh: 3x dan 5x adalah suku sejenis, sedangkan 3x dan 5y bukan.</p>
- </div>
-</section>
+<section id="tujuan" class="card"><h2>🎯 Tujuan Pembelajaran</h2><p>Setelah mempelajari materi ini, peserta didik diharapkan mampu:</p><ol><li>Menjelaskan pengertian bentuk aljabar.</li><li>Mengidentifikasi variabel, koefisien, konstanta, dan suku.</li><li>Membedakan suku sejenis dan tidak sejenis.</li><li>Menyederhanakan bentuk aljabar.</li><li>Melakukan operasi penjumlahan, pengurangan, perkalian, dan pembagian sederhana.</li><li>Menyelesaikan masalah sehari-hari menggunakan bentuk aljabar.</li></ol></section>
 
-<section id="contoh" class="panel">
- <div class="card">
-  <h2>🛍️ Aljabar dalam kehidupan sehari-hari</h2>
-  <p><b>Situasi:</b> Harga satu pensil adalah x rupiah. Rani membeli 3 pensil dan sebuah penghapus seharga Rp2.000.</p>
-  <div class="example">Biaya 3 pensil = <span class="math">3x</span><br>Biaya penghapus = <span class="math">2.000</span><br>Total belanja = <span class="math">3x + 2.000</span></div>
-  <p>Jadi, bentuk aljabar untuk total belanja Rani adalah <b>3x + 2.000</b>.</p>
- </div>
- <div class="card">
-  <h2>✏️ Coba analisis bentuk aljabar ini</h2>
-  <div class="example"><span class="math">7a − 4b + 9</span></div>
-  <ul>
-   <li>Variabel: <b>a</b> dan <b>b</b></li>
-   <li>Koefisien: <b>7</b> dan <b>−4</b></li>
-   <li>Konstanta: <b>9</b></li>
-   <li>Banyak suku: <b>3</b> (7a, −4b, dan 9)</li>
-  </ul>
-  <div class="note">Perhatikan tanda negatif! Koefisien dari b adalah −4, bukan 4.</div>
- </div>
-</section>
+<section id="materi" class="card"><h2>1. Pengertian Bentuk Aljabar</h2><p>Bentuk aljabar adalah bentuk matematika yang memuat bilangan, variabel, dan operasi hitung. Variabel adalah huruf yang mewakili bilangan yang belum diketahui atau nilainya dapat berubah.</p><div class="box"><b>Contoh:</b> <span class="math">3x + 5</span><br>Artinya 3 dikalikan dengan suatu bilangan x, kemudian ditambah 5.</div><h3>Aljabar dalam kehidupan sehari-hari</h3><p>Harga satu buku adalah x rupiah. Jika membeli 4 buku, biayanya <span class="math">4x</span>. Jika membeli 4 buku dan sebuah pensil seharga Rp2.000, total biaya adalah <span class="math">4x + 2.000</span>.</section>
 
-<section id="game" class="panel">
- <div class="card" id="quiz">
-  <div class="game-top">
-   <div><span class="pill">🎯 Tantangan Aljabar</span><h2 style="margin:8px 0 0">Siap jadi jagoan aljabar?</h2></div>
-   <div class="stats"><div class="stat">⭐ Skor: <span id="score">0</span></div><div class="stat">📝 Soal: <span id="number">1/10</span></div></div>
-  </div>
-  <div class="progress"><div class="bar" id="bar"></div></div>
-  <div id="question" class="question"></div>
-  <div id="answers" class="answers"></div>
-  <div id="feedback" class="feedback" aria-live="polite">Pilih jawaban yang menurutmu paling tepat. Semangat! 🌟</div>
-  <div class="controls"><button class="secondary" id="hint">💡 Petunjuk</button><button class="primary" id="next" disabled>Soal Berikutnya ➜</button></div>
- </div>
- <div class="card" id="result" hidden>
-  <div style="font-size:3rem">🏆</div><h2>Petualangan selesai!</h2>
-  <p>Skor akhir kamu:</p><div class="bigscore" id="finalscore">0/100</div>
-  <p id="message"></p>
-  <button class="primary" id="restart">🔁 Main Lagi</button>
- </div>
-</section>
-<footer>Belajar sedikit demi sedikit, lalu taklukkan tantangannya! 💜</footer>
-</main>
+<section class="card"><h2>2. Unsur-Unsur Bentuk Aljabar</h2><div class="grid"><div class="tile"><h3>Variabel</h3><p>Huruf yang mewakili bilangan. Pada 7x + 4, variabelnya x.</p></div><div class="tile"><h3>Koefisien</h3><p>Bilangan pengali variabel. Pada 7x + 4, koefisien x adalah 7.</p></div><div class="tile"><h3>Konstanta</h3><p>Suku berupa bilangan tanpa variabel. Pada 7x + 4, konstantanya 4.</p></div><div class="tile"><h3>Suku</h3><p>Bagian yang dipisahkan tanda + atau −. Pada 7x + 4, sukunya 7x dan 4.</p></div></div><h3>Contoh analisis: 5a − 3b + 8</h3><table><tr><th>Unsur</th><th>Jawaban</th><th>Penjelasan</th></tr><tr><td>Variabel</td><td>a dan b</td><td>Huruf yang mewakili bilangan.</td></tr><tr><td>Koefisien</td><td>5 dan −3</td><td>Pengali variabel a dan b.</td></tr><tr><td>Konstanta</td><td>8</td><td>Bilangan tanpa variabel.</td></tr><tr><td>Suku</td><td>5a, −3b, 8</td><td>Ada 3 suku.</td></tr></table><div class="box gold">Perhatikan tanda negatif! Koefisien b pada 5a − 3b + 8 adalah −3, bukan 3.</div><h3>Jenis berdasarkan banyak suku</h3><ul><li>Monomial (1 suku): <span class="math">5x</span></li><li>Binomial (2 suku): <span class="math">x + 3</span></li><li>Trinomial (3 suku): <span class="math">2a + b − 4</span></li><li>Polinomial: bentuk aljabar yang terdiri atas beberapa suku.</li></ul></section>
+
+<section class="card"><h2>3. Suku Sejenis dan Tidak Sejenis</h2><p><b>Suku sejenis</b> memiliki variabel dan pangkat variabel yang sama. <b>Suku tidak sejenis</b> memiliki variabel atau pangkat yang berbeda.</p><table><tr><th>Pasangan</th><th>Jenis</th><th>Alasan</th></tr><tr><td>3x dan 8x</td><td>Sejenis</td><td>Variabel sama, yaitu x.</td></tr><tr><td>4a dan −2a</td><td>Sejenis</td><td>Variabel sama, yaitu a.</td></tr><tr><td>5x dan 5y</td><td>Tidak sejenis</td><td>Variabel berbeda.</td></tr><tr><td>2x dan 2x²</td><td>Tidak sejenis</td><td>Pangkat berbeda.</td></tr></table><div class="box">Ingat: hanya suku sejenis yang dapat dijumlahkan atau dikurangkan langsung.</div></section>
+
+<section id="operasi" class="card"><h2>4. Operasi Hitung Bentuk Aljabar</h2>
+<h3>A. Penjumlahan</h3><p>Jumlahkan koefisien dari suku-suku sejenis. Suku tidak sejenis tetap ditulis.</p><div class="solution"><b>Contoh:</b> Sederhanakan <span class="math">3x + 5x + 2</span>.<ol><li>Kelompokkan suku sejenis: (3x + 5x) + 2.</li><li>Jumlahkan koefisien: (3 + 5)x + 2.</li><li>Hasilnya <b>8x + 2</b>.</li></ol></div>
+<h3>B. Pengurangan</h3><p>Gabungkan suku sejenis. Jika tanda minus berada di depan kurung, ubah tanda setiap suku di dalam kurung.</p><div class="solution"><b>Contoh:</b> <span class="math">7a + 4 − 3a − 2</span>.<ol><li>Kelompokkan: (7a − 3a) + (4 − 2).</li><li>Kurangkan koefisien: 4a.</li><li>Kurangkan konstanta: 2.</li></ol><b>Hasil: 4a + 2.</b></div><div class="solution"><b>Contoh dengan kurung:</b> <span class="math">8x − (3x + 5)</span>.<ol><li>Ubah tanda dalam kurung: 8x − 3x − 5.</li><li>Gabungkan suku sejenis: 5x − 5.</li></ol><b>Hasil: 5x − 5.</b></div>
+<h3>C. Perkalian</h3><p>Kalikan koefisien. Jika variabel sama, gunakan aturan pangkat: x × x = x².</p><div class="solution"><b>Contoh 1:</b> <span class="math">3x × 4</span><ol><li>3 × 4 = 12.</li><li>Variabel x tetap ditulis.</li></ol><b>Hasil: 12x.</b></div><div class="solution"><b>Contoh 2:</b> <span class="math">2x × 3x</span><ol><li>Kalikan koefisien: 2 × 3 = 6.</li><li>Kalikan variabel: x × x = x².</li></ol><b>Hasil: 6x².</b></div><div class="solution"><b>Contoh distributif:</b> <span class="math">3(x + 4)</span><ol><li>3 dikalikan dengan setiap suku di dalam kurung.</li><li>(3 × x) + (3 × 4) = 3x + 12.</li></ol><b>Hasil: 3x + 12.</b></div>
+<h3>D. Pembagian</h3><p>Bagi koefisien dan sederhanakan variabel yang sama.</p><div class="solution"><b>Contoh 1:</b> <span class="math">12x ÷ 3</span><ol><li>12 ÷ 3 = 4.</li><li>Variabel x tetap.</li></ol><b>Hasil: 4x.</b></div><div class="solution"><b>Contoh 2:</b> <span class="math">15x² ÷ 5x</span><ol><li>15 ÷ 5 = 3.</li><li>x² ÷ x = x.</li></ol><b>Hasil: 3x, dengan x ≠ 0.</b></div>
+<div class="box green"><b>Ringkasan aturan:</b> Penjumlahan/pengurangan menggabungkan suku sejenis. Perkalian menggunakan perkalian koefisien dan sifat distributif. Pembagian menyederhanakan koefisien serta variabel yang sama.</div></section>
+
+<section id="contoh" class="card"><h2>5. Contoh Soal dan Penyelesaian Lengkap</h2>
+<details open><summary>Soal 1 — Mengidentifikasi unsur aljabar</summary><div class="inside"><p>Tentukan variabel, koefisien, konstanta, dan banyak suku dari <span class="math">9p − 4q + 7</span>.</p><div class="solution"><b>Penyelesaian:</b><ol><li>Variabel adalah huruf p dan q.</li><li>Koefisien p adalah 9 dan koefisien q adalah −4.</li><li>Konstanta adalah 7 karena tidak memiliki variabel.</li><li>Sukunya 9p, −4q, dan 7, jadi ada 3 suku.</li></ol><b>Jawaban:</b> Variabel p dan q; koefisien 9 dan −4; konstanta 7; tiga suku.</div></div></details>
+<details><summary>Soal 2 — Penjumlahan aljabar</summary><div class="inside"><p>Sederhanakan <span class="math">4x + 7 + 3x − 2</span>.</p><div class="solution"><b>Penyelesaian:</b><ol><li>Kelompokkan: (4x + 3x) + (7 − 2).</li><li>4x + 3x = 7x.</li><li>7 − 2 = 5.</li></ol><b>Jawaban: 7x + 5.</b></div></div></details>
+<details><summary>Soal 3 — Pengurangan aljabar</summary><div class="inside"><p>Hitung <span class="math">(8a + 6) − (3a + 2)</span>.</p><div class="solution"><b>Penyelesaian:</b><ol><li>Hilangkan kurung kedua dengan mengubah tandanya: 8a + 6 − 3a − 2.</li><li>Kelompokkan: (8a − 3a) + (6 − 2).</li><li>Hasilnya 5a + 4.</li></ol><b>Jawaban: 5a + 4.</b></div></div></details>
+<details><summary>Soal 4 — Perkalian distributif</summary><div class="inside"><p>Tentukan hasil <span class="math">5(2x + 3)</span>.</p><div class="solution"><b>Penyelesaian:</b><ol><li>Kalikan 5 dengan 2x: 10x.</li><li>Kalikan 5 dengan 3: 15.</li><li>Gabungkan hasilnya.</li></ol><b>Jawaban: 10x + 15.</b></div></div></details>
+<details><summary>Soal 5 — Pembagian aljabar</summary><div class="inside"><p>Sederhanakan <span class="math">18x² ÷ 6x</span>.</p><div class="solution"><b>Penyelesaian:</b><ol><li>18 ÷ 6 = 3.</li><li>x² ÷ x = x.</li></ol><b>Jawaban: 3x, dengan x ≠ 0.</b></div></div></details>
+<details><summary>Soal 6 — Soal cerita harga barang</summary><div class="inside"><p>Harga satu buku adalah x rupiah. Riko membeli 3 buku dan 2 pulpen. Harga satu pulpen Rp2.500. Nyatakan total harga dalam bentuk aljabar.</p><div class="solution"><b>Penyelesaian:</b><ol><li>Harga 3 buku = 3 × x = 3x rupiah.</li><li>Harga 2 pulpen = 2 × Rp2.500 = Rp5.000.</li><li>Total = 3x + 5.000.</li></ol><b>Jawaban: 3x + 5.000 rupiah.</b></div></div></details>
+<details><summary>Soal 7 — Keliling persegi panjang</summary><div class="inside"><p>Panjang persegi panjang (x + 4) cm dan lebarnya x cm. Nyatakan kelilingnya.</p><div class="solution"><b>Penyelesaian:</b><ol><li>Rumus keliling: K = 2(p + l).</li><li>Masukkan p dan l: K = 2((x + 4) + x).</li><li>Gabungkan di dalam kurung: K = 2(2x + 4).</li><li>Kalikan 2: K = 4x + 8.</li></ol><b>Jawaban: 4x + 8 cm.</b></div></div></details>
+<details><summary>Soal 8 — Substitusi nilai variabel</summary><div class="inside"><p>Tentukan nilai <span class="math">3x + 2</span> jika x = 4.</p><div class="solution"><b>Penyelesaian:</b><ol><li>Ganti x dengan 4: 3(4) + 2.</li><li>Kerjakan perkalian: 12 + 2.</li><li>Jumlahkan: 14.</li></ol><b>Jawaban: 14.</b></div></div></details></section>
+
+<section id="latihan" class="card"><h2>6. Latihan Mandiri dan Pembahasan</h2><p>Kerjakan terlebih dahulu di buku catatan. Buka bagian pembahasan setelah selesai mencoba sendiri.</p>
+<details><summary>Latihan 1 — Identifikasi unsur</summary><div class="inside"><p>Tentukan variabel, koefisien, konstanta, dan banyak suku dari <span class="math">6x + 2y − 9</span>.</p><div class="solution"><b>Pembahasan:</b> Variabel x dan y. Koefisien x = 6 dan y = 2. Konstanta = −9. Suku-sukunya 6x, 2y, dan −9, jadi ada 3 suku.</div></div></details>
+<details><summary>Latihan 2 — Suku sejenis</summary><div class="inside"><p>Tentukan pasangan sejenis dari: 4a dan 7a; 3x dan 3y; 5m dan −2m; 2p dan 2p².</p><div class="solution"><b>Pembahasan:</b> 4a dan 7a sejenis karena variabelnya sama. 3x dan 3y tidak sejenis karena variabel berbeda. 5m dan −2m sejenis. 2p dan 2p² tidak sejenis karena pangkat berbeda.</div></div></details>
+<details><summary>Latihan 3 — Penjumlahan</summary><div class="inside"><p>Sederhanakan <span class="math">5x + 3 + 2x + 8</span>.</p><div class="solution"><b>Pembahasan:</b><ol><li>Kelompokkan: (5x + 2x) + (3 + 8).</li><li>5x + 2x = 7x.</li><li>3 + 8 = 11.</li></ol><b>Jawaban: 7x + 11.</b></div></div></details>
+<details><summary>Latihan 4 — Pengurangan</summary><div class="inside"><p>Sederhanakan <span class="math">10a − 4 + 3a − 6</span>.</p><div class="solution"><b>Pembahasan:</b> Kelompokkan (10a + 3a) + (−4 − 6). Hasilnya 13a − 10.</div></div></details>
+<details><summary>Latihan 5 — Tanda kurung</summary><div class="inside"><p>Hitung <span class="math">9x − (2x − 5)</span>.</p><div class="solution"><b>Pembahasan:</b> Ubah tanda dalam kurung: 9x − 2x + 5. Gabungkan 9x − 2x = 7x. <b>Jawaban: 7x + 5.</b></div></div></details>
+<details><summary>Latihan 6 — Perkalian distributif</summary><div class="inside"><p>Jabarkan <span class="math">4(3y − 2)</span>.</p><div class="solution"><b>Pembahasan:</b> 4 × 3y = 12y dan 4 × (−2) = −8. <b>Jawaban: 12y − 8.</b></div></div></details>
+<details><summary>Latihan 7 — Pembagian</summary><div class="inside"><p>Sederhanakan <span class="math">20a² ÷ 4a</span>.</p><div class="solution"><b>Pembahasan:</b> 20 ÷ 4 = 5 dan a² ÷ a = a. <b>Jawaban: 5a, dengan a ≠ 0.</b></div></div></details>
+<details><summary>Latihan 8 — Substitusi</summary><div class="inside"><p>Jika p = 3, tentukan nilai <span class="math">5p − 7</span>.</p><div class="solution"><b>Pembahasan:</b> Ganti p dengan 3: 5(3) − 7 = 15 − 7 = 8. <b>Jawaban: 8.</b></div></div></details>
+<details><summary>Latihan 9 — Soal cerita umur</summary><div class="inside"><p>Umur Ani x tahun. Umur kakaknya 5 tahun lebih tua. Nyatakan jumlah umur mereka.</p><div class="solution"><b>Pembahasan:</b> Umur Ani = x. Umur kakak = x + 5. Jumlah = x + (x + 5) = 2x + 5. <b>Jawaban: 2x + 5 tahun.</b></div></div></details>
+<details><summary>Latihan 10 — Keliling segitiga</summary><div class="inside"><p>Panjang sisi segitiga adalah 2x cm, (x + 3) cm, dan (2x − 1) cm. Nyatakan kelilingnya.</p><div class="solution"><b>Pembahasan:</b><ol><li>K = 2x + (x + 3) + (2x − 1).</li><li>Kelompokkan: (2x + x + 2x) + (3 − 1).</li><li>Jumlahkan: 5x + 2.</li></ol><b>Jawaban: 5x + 2 cm.</b></div></div></details></section>
+
+<section id="kuis" class="card"><h2>7. Kuis Pemahaman</h2><p>Pilih jawaban yang tepat, lalu tekan Periksa Jawaban untuk melihat skor dan pembahasan.</p>
+<form id="quiz">
+<div class="quizq"><b>1. Koefisien dari 8x pada 8x + 3 adalah ...</b><div class="options"><label><input type="radio" name="q1" value="a"> 8</label><label><input type="radio" name="q1" value="b"> x</label><label><input type="radio" name="q1" value="c"> 3</label></div><div class="result" id="r1">Benar: 8. Koefisien adalah bilangan pengali variabel.</div></div>
+<div class="quizq"><b>2. Hasil 4a + 2a adalah ...</b><div class="options"><label><input type="radio" name="q2" value="a"> 6</label><label><input type="radio" name="q2" value="b"> 6a</label><label><input type="radio" name="q2" value="c"> 8a</label></div><div class="result" id="r2">Benar: 6a. Jumlahkan koefisien 4 + 2 dan tulis variabel a.</div></div>
+<div class="quizq"><b>3. Konstanta dari 3x − 10 adalah ...</b><div class="options"><label><input type="radio" name="q3" value="a"> 3</label><label><input type="radio" name="q3" value="b"> x</label><label><input type="radio" name="q3" value="c"> −10</label></div><div class="result" id="r3">Benar: −10. Konstanta adalah suku tanpa variabel.</div></div>
+<div class="quizq"><b>4. Hasil 2(x + 5) adalah ...</b><div class="options"><label><input type="radio" name="q4" value="a"> 2x + 5</label><label><input type="radio" name="q4" value="b"> 2x + 10</label><label><input type="radio" name="q4" value="c"> x + 10</label></div><div class="result" id="r4">Benar: 2x + 10. Kalikan 2 dengan setiap suku di dalam kurung.</div></div>
+<div class="quizq"><b>5. Jika x = 2, nilai 3x + 4 adalah ...</b><div class="options"><label><input type="radio" name="q5" value="a"> 10</label><label><input type="radio" name="q5" value="b"> 9</label><label><input type="radio" name="q5" value="c"> 14</label></div><div class="result" id="r5">Benar: 10. Substitusi: 3(2) + 4 = 6 + 4 = 10.</div></div>
+<button type="button" onclick="checkQuiz()">Periksa Jawaban</button> <button type="reset" class="light" onclick="resetQuiz()">Ulangi Kuis</button><div id="score" class="box green" style="display:none"></div></form></section>
+<section class="card"><h2>🌟 Rangkuman</h2><ul><li>Bentuk aljabar memuat variabel, koefisien, konstanta, dan suku.</li><li>Suku sejenis memiliki variabel dan pangkat yang sama.</li><li>Penjumlahan dan pengurangan hanya menggabungkan suku sejenis.</li><li>Perkalian dapat menggunakan sifat distributif.</li><li>Pembagian dilakukan dengan menyederhanakan koefisien dan variabel yang sama.</li></ul><div class="box green"><b>Pesan belajar:</b> Pahami alasan setiap langkah, tuliskan proses dengan rapi, dan periksa kembali jawabanmu.</div></section>
+<footer>Modul belajar Matematika • Bentuk Aljabar • Kelas VII SMP</footer></div>
 <script>
-const questions = [
- {q:"Pada bentuk 6x + 4, manakah yang disebut variabel?",a:["6","x","4","6x"],c:1,e:"Variabel adalah huruf yang mewakili bilangan. Pada 6x + 4, variabelnya adalah x."},
- {q:"Koefisien dari y pada bentuk 9y − 2 adalah ...",a:["9","y","−2","2"],c:0,e:"Koefisien adalah angka pengali variabel. Karena 9 mengalikan y, koefisiennya 9."},
- {q:"Konstanta dari 5a + 12 adalah ...",a:["5","a","12","5a"],c:2,e:"Konstanta adalah suku berupa bilangan tanpa variabel. Jawabannya 12."},
- {q:"Berapa banyak suku pada bentuk 3x + 2y − 8?",a:["1 suku","2 suku","3 suku","4 suku"],c:2,e:"Sukunya adalah 3x, 2y, dan −8. Jadi ada 3 suku."},
- {q:"Manakah yang merupakan bentuk aljabar?",a:["12 + 5","8 × 3","4p − 7","20 ÷ 2"],c:2,e:"4p − 7 memuat variabel p, sehingga merupakan bentuk aljabar."},
- {q:"Pada bentuk −4m + 10, koefisien m adalah ...",a:["4","−4","10","−10"],c:1,e:"Tanda negatif melekat pada koefisien. Jadi koefisien m adalah −4."},
- {q:"Bentuk 2x + 5 memiliki ... suku.",a:["1","2","3","5"],c:1,e:"Dua sukunya adalah 2x dan 5. Bentuk ini disebut binomial."},
- {q:"Manakah pasangan suku sejenis?",a:["3x dan 3y","2a dan 5a","4p dan 4","x dan x²"],c:1,e:"2a dan 5a sama-sama memiliki variabel a dengan pangkat satu."},
- {q:"Jika harga satu buku adalah b rupiah, harga 4 buku dinyatakan dengan ...",a:["b + 4","4 + b","4b","b ÷ 4"],c:2,e:"Empat buku dengan harga b rupiah per buku berarti 4 × b = 4b."},
- {q:"Pada bentuk 7p − 3q + 6, pernyataan yang benar adalah ...",a:["Variabelnya hanya p","Konstantanya −3","Koefisien q adalah −3","Banyak sukunya 2"],c:2,e:"Bentuk itu memiliki variabel p dan q, konstanta 6, serta koefisien q yaitu −3."}
-];
-let order=[], index=0, score=0, answered=false, hintUsed=false;
-const $=id=>document.getElementById(id);
-function shuffle(arr){return arr.map(v=>[Math.random(),v]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);}
-function startGame(){order=shuffle([...questions]);index=0;score=0;answered=false;hintUsed=false;$("score").textContent=score;$("quiz").hidden=false;$("result").hidden=true;renderQuestion();}
-function renderQuestion(){
- const item=order[index];answered=false;hintUsed=false;
- $("number").textContent=(index+1)+"/"+order.length;
- $("bar").style.width=(index/order.length*100)+"%";
- $("question").textContent=(index+1)+". "+item.q;
- $("answers").innerHTML="";$("feedback").textContent="Pilih jawaban yang menurutmu paling tepat. Semangat! 🌟";
- $("next").disabled=true;$("next").textContent=index===order.length-1?"Lihat Hasil 🏆":"Soal Berikutnya ➜";
- item.a.forEach((answer,i)=>{const b=document.createElement("button");b.className="answer";b.textContent=String.fromCharCode(65+i)+". "+answer;b.addEventListener("click",()=>choose(i));$("answers").appendChild(b);});
-}
-function choose(choice){
- if(answered)return;answered=true;const item=order[index];const buttons=[...$("answers").children];
- buttons.forEach((b,i)=>{b.disabled=true;if(i===item.c)b.classList.add("correct");if(i===choice&&choice!==item.c)b.classList.add("wrong");});
- if(choice===item.c){score+=hintUsed?5:10;$("feedback").textContent="🎉 Tepat sekali! "+item.e;}else{$("feedback").textContent="Belum tepat, tidak apa-apa! "+item.e;}
- $("score").textContent=score;$("next").disabled=false;
-}
-$("hint").addEventListener("click",()=>{if(answered||hintUsed)return;hintUsed=true;$("feedback").textContent="💡 Petunjuk: "+order[index].e.split(".")[0]+". Skor untuk jawaban benar pada soal ini menjadi 5 poin.";});
-$("next").addEventListener("click",()=>{if(!answered)return;index++;if(index<order.length){renderQuestion();}else{finish();}});
-function finish(){$("quiz").hidden=true;$("result").hidden=false;$("bar").style.width="100%";$("finalscore").textContent=score+"/100";$("message").textContent=score>=90?"Luar biasa! Kamu sudah menjadi master aljabar! 🌟":score>=70?"Hebat! Pemahamanmu sudah bagus. Terus berlatih, ya! 💪":score>=50?"Bagus, kamu sudah berusaha. Baca kembali materi dan coba lagi! 📚":"Jangan menyerah! Pelajari kembali materi, lalu mulai tantangan baru. 🚀";}
-$("restart").addEventListener("click",startGame);
-document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b===btn));document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("active",p.id===btn.dataset.tab));}));
-startGame();
-</script>
-</body>
-</html>
+function checkQuiz(){const key={q1:"a",q2:"b",q3:"c",q4:"b",q5:"a"};let score=0,done=0;for(let i=1;i<=5;i++){const c=document.querySelector('input[name="q'+i+'"]:checked');document.getElementById("r"+i).style.display="block";if(c){done++;if(c.value===key["q"+i])score++;}}const out=document.getElementById("score");out.style.display="block";out.textContent="Skor: "+(score*20)+"/100 ("+score+" dari 5 benar). "+(done<5?"Masih ada soal yang belum dijawab. ": "")+(score===5?"Hebat, semua benar!":score>=3?"Bagus! Pelajari kembali jawaban yang belum tepat.":"Ayo baca lagi materi dan pembahasan, lalu coba kembali.");}
+function resetQuiz(){setTimeout(()=>{for(let i=1;i<=5;i++)document.getElementById("r"+i).style.display="none";document.getElementById("score").style.display="none";},0);}
+</script></body></html>
