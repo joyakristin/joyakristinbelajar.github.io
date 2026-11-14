@@ -1,1 +1,169 @@
-Selamat Datang di website Joya Kristin Simanihuruk 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petualangan Bentuk Aljabar</title>
+<style>
+:root{--navy:#18234a;--purple:#7057d9;--pink:#ff6b9a;--mint:#5ed6b3;--yellow:#ffd166;--paper:#f6f7ff;--ink:#263052}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(135deg,#e8e9ff,#fff0f5 55%,#e7fff8);min-height:100vh}
+header{padding:30px 18px 24px;text-align:center;color:white;background:linear-gradient(120deg,#5141b8,#8a5be8 60%,#e66d9d);border-radius:0 0 32px 32px}
+header .eyebrow{font-size:.85rem;letter-spacing:2px;font-weight:800;opacity:.9}
+h1{font-size:clamp(2rem,5vw,3.2rem);margin:8px 0}
+header p{margin:0 auto;max-width:680px;line-height:1.6}
+main{max-width:1000px;margin:24px auto;padding:0 16px 40px}
+nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:18px 0 24px}
+.tab{border:0;border-radius:999px;padding:11px 18px;font-weight:800;background:white;color:#5748a7;box-shadow:0 4px 12px #4d43851c;cursor:pointer}
+.tab.active{background:var(--navy);color:white}
+.panel{display:none}.panel.active{display:block}
+.card{background:#ffffffed;border:1px solid #ffffff;border-radius:22px;padding:22px;margin:14px 0;box-shadow:0 10px 30px #403a7410}
+.card h2{margin:0 0 12px;color:#4d3da8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px}
+.mini{background:#f2f0ff;border-radius:16px;padding:16px}
+.mini:nth-child(2){background:#fff0f5}.mini:nth-child(3){background:#eafff7}
+.mini h3{margin:0 0 7px}.mini p{margin:0;line-height:1.5}
+.math{font-size:1.35rem;font-weight:900;color:#4d3da8;letter-spacing:.3px}
+.note{padding:13px 16px;background:#fff8df;border-left:5px solid var(--yellow);border-radius:12px;line-height:1.55}
+.example{background:#f7f8ff;border-radius:14px;padding:14px;margin:10px 0;line-height:1.65}
+.pill{display:inline-block;padding:5px 10px;border-radius:99px;background:#eae6ff;color:#5748a7;font-size:.82rem;font-weight:800}
+.game-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.stats{display:flex;gap:9px;flex-wrap:wrap}.stat{background:#f0efff;padding:9px 13px;border-radius:12px;font-weight:800}
+.progress{height:10px;background:#ecebfa;border-radius:20px;overflow:hidden;margin:15px 0 20px}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--purple));transition:width .3s}
+.question{font-size:1.3rem;font-weight:850;line-height:1.5;margin:12px 0 18px}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.answer{border:2px solid #e7e5f7;background:white;border-radius:14px;padding:14px;text-align:left;font-weight:750;font-size:1rem;cursor:pointer;color:var(--ink);transition:.15s}
+.answer:hover{border-color:var(--purple);transform:translateY(-2px)}
+.answer:disabled{cursor:default;transform:none}.answer.correct{background:#e5fff4;border-color:#39b88f}.answer.wrong{background:#fff0f2;border-color:#f16b85}
+.feedback{min-height:52px;padding:12px;border-radius:13px;margin:14px 0;line-height:1.5;background:#f5f4ff}
+.controls{display:flex;gap:10px;flex-wrap:wrap}
+button.primary{background:var(--purple);color:white;border:0;border-radius:13px;padding:12px 18px;font-weight:850;cursor:pointer}
+button.secondary{background:#f0efff;color:#5141a8;border:0;border-radius:13px;padding:12px 18px;font-weight:850;cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}
+#result{text-align:center}.bigscore{font-size:3rem;font-weight:950;color:var(--purple);margin:6px}
+footer{text-align:center;color:#6b6d88;font-size:.88rem;padding:10px}
+@media(max-width:560px){.answers{grid-template-columns:1fr}.card{padding:17px}.question{font-size:1.15rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">MISI MATEMATIKA • KELAS VII SMP</div>
+  <h1>🚀 Petualangan Bentuk Aljabar</h1>
+  <p>Kenali variabel, koefisien, konstanta, dan suku. Setelah itu, uji kemampuanmu lewat kuis tebak-tebakan!</p>
+</header>
+<main>
+<nav>
+  <button class="tab active" data-tab="materi">📚 Belajar Dulu</button>
+  <button class="tab" data-tab="contoh">🧩 Contoh Seru</button>
+  <button class="tab" data-tab="game">🎮 Mulai Kuis</button>
+</nav>
+
+<section id="materi" class="panel active">
+ <div class="card">
+  <h2>🔎 Apa itu bentuk aljabar?</h2>
+  <p>Bentuk aljabar adalah bentuk matematika yang memuat <b>angka</b>, <b>variabel</b>, dan operasi hitung. Variabel adalah huruf yang mewakili suatu bilangan yang belum diketahui atau dapat berubah.</p>
+  <div class="example"><span class="math">3x + 5</span><br>Artinya: 3 dikalikan suatu bilangan <b>x</b>, kemudian ditambah 5.</div>
+  <div class="note">💡 Ingat! Huruf dalam aljabar bukan hiasan. Huruf tersebut mewakili bilangan.</div>
+ </div>
+ <div class="card">
+  <h2>🧠 Kenali bagian-bagiannya</h2>
+  <div class="grid">
+   <div class="mini"><h3>🔤 Variabel</h3><p>Huruf yang mewakili bilangan.</p><p class="math">4<strong>x</strong> + 7</p><p>Variabelnya adalah <b>x</b>.</p></div>
+   <div class="mini"><h3>✖️ Koefisien</h3><p>Angka yang mengalikan variabel.</p><p class="math"><strong>4</strong>x + 7</p><p>Koefisien x adalah <b>4</b>.</p></div>
+   <div class="mini"><h3>🔢 Konstanta</h3><p>Bilangan yang tidak memuat variabel.</p><p class="math">4x + <strong>7</strong></p><p>Konstantanya adalah <b>7</b>.</p></div>
+   <div class="mini"><h3>🧱 Suku</h3><p>Bagian bentuk aljabar yang dipisahkan oleh tanda + atau −.</p><p class="math">4x + 7</p><p>Sukunya: <b>4x</b> dan <b>7</b>.</p></div>
+  </div>
+ </div>
+ <div class="card">
+  <h2>📦 Jenis bentuk aljabar berdasarkan suku</h2>
+  <div class="grid">
+   <div class="mini"><h3>Monomial (1 suku)</h3><p class="math">5a</p><p>Contoh: 5a</p></div>
+   <div class="mini"><h3>Binomial (2 suku)</h3><p class="math">x + 3</p><p>Contoh: x + 3</p></div>
+   <div class="mini"><h3>Trinomial (3 suku)</h3><p class="math">2p + q − 4</p><p>Contoh: 2p + q − 4</p></div>
+  </div>
+  <p class="note">Catatan: Suku sejenis memiliki variabel dan pangkat variabel yang sama. Contoh: 3x dan 5x adalah suku sejenis, sedangkan 3x dan 5y bukan.</p>
+ </div>
+</section>
+
+<section id="contoh" class="panel">
+ <div class="card">
+  <h2>🛍️ Aljabar dalam kehidupan sehari-hari</h2>
+  <p><b>Situasi:</b> Harga satu pensil adalah x rupiah. Rani membeli 3 pensil dan sebuah penghapus seharga Rp2.000.</p>
+  <div class="example">Biaya 3 pensil = <span class="math">3x</span><br>Biaya penghapus = <span class="math">2.000</span><br>Total belanja = <span class="math">3x + 2.000</span></div>
+  <p>Jadi, bentuk aljabar untuk total belanja Rani adalah <b>3x + 2.000</b>.</p>
+ </div>
+ <div class="card">
+  <h2>✏️ Coba analisis bentuk aljabar ini</h2>
+  <div class="example"><span class="math">7a − 4b + 9</span></div>
+  <ul>
+   <li>Variabel: <b>a</b> dan <b>b</b></li>
+   <li>Koefisien: <b>7</b> dan <b>−4</b></li>
+   <li>Konstanta: <b>9</b></li>
+   <li>Banyak suku: <b>3</b> (7a, −4b, dan 9)</li>
+  </ul>
+  <div class="note">Perhatikan tanda negatif! Koefisien dari b adalah −4, bukan 4.</div>
+ </div>
+</section>
+
+<section id="game" class="panel">
+ <div class="card" id="quiz">
+  <div class="game-top">
+   <div><span class="pill">🎯 Tantangan Aljabar</span><h2 style="margin:8px 0 0">Siap jadi jagoan aljabar?</h2></div>
+   <div class="stats"><div class="stat">⭐ Skor: <span id="score">0</span></div><div class="stat">📝 Soal: <span id="number">1/10</span></div></div>
+  </div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+  <div id="question" class="question"></div>
+  <div id="answers" class="answers"></div>
+  <div id="feedback" class="feedback" aria-live="polite">Pilih jawaban yang menurutmu paling tepat. Semangat! 🌟</div>
+  <div class="controls"><button class="secondary" id="hint">💡 Petunjuk</button><button class="primary" id="next" disabled>Soal Berikutnya ➜</button></div>
+ </div>
+ <div class="card" id="result" hidden>
+  <div style="font-size:3rem">🏆</div><h2>Petualangan selesai!</h2>
+  <p>Skor akhir kamu:</p><div class="bigscore" id="finalscore">0/100</div>
+  <p id="message"></p>
+  <button class="primary" id="restart">🔁 Main Lagi</button>
+ </div>
+</section>
+<footer>Belajar sedikit demi sedikit, lalu taklukkan tantangannya! 💜</footer>
+</main>
+<script>
+const questions = [
+ {q:"Pada bentuk 6x + 4, manakah yang disebut variabel?",a:["6","x","4","6x"],c:1,e:"Variabel adalah huruf yang mewakili bilangan. Pada 6x + 4, variabelnya adalah x."},
+ {q:"Koefisien dari y pada bentuk 9y − 2 adalah ...",a:["9","y","−2","2"],c:0,e:"Koefisien adalah angka pengali variabel. Karena 9 mengalikan y, koefisiennya 9."},
+ {q:"Konstanta dari 5a + 12 adalah ...",a:["5","a","12","5a"],c:2,e:"Konstanta adalah suku berupa bilangan tanpa variabel. Jawabannya 12."},
+ {q:"Berapa banyak suku pada bentuk 3x + 2y − 8?",a:["1 suku","2 suku","3 suku","4 suku"],c:2,e:"Sukunya adalah 3x, 2y, dan −8. Jadi ada 3 suku."},
+ {q:"Manakah yang merupakan bentuk aljabar?",a:["12 + 5","8 × 3","4p − 7","20 ÷ 2"],c:2,e:"4p − 7 memuat variabel p, sehingga merupakan bentuk aljabar."},
+ {q:"Pada bentuk −4m + 10, koefisien m adalah ...",a:["4","−4","10","−10"],c:1,e:"Tanda negatif melekat pada koefisien. Jadi koefisien m adalah −4."},
+ {q:"Bentuk 2x + 5 memiliki ... suku.",a:["1","2","3","5"],c:1,e:"Dua sukunya adalah 2x dan 5. Bentuk ini disebut binomial."},
+ {q:"Manakah pasangan suku sejenis?",a:["3x dan 3y","2a dan 5a","4p dan 4","x dan x²"],c:1,e:"2a dan 5a sama-sama memiliki variabel a dengan pangkat satu."},
+ {q:"Jika harga satu buku adalah b rupiah, harga 4 buku dinyatakan dengan ...",a:["b + 4","4 + b","4b","b ÷ 4"],c:2,e:"Empat buku dengan harga b rupiah per buku berarti 4 × b = 4b."},
+ {q:"Pada bentuk 7p − 3q + 6, pernyataan yang benar adalah ...",a:["Variabelnya hanya p","Konstantanya −3","Koefisien q adalah −3","Banyak sukunya 2"],c:2,e:"Bentuk itu memiliki variabel p dan q, konstanta 6, serta koefisien q yaitu −3."}
+];
+let order=[], index=0, score=0, answered=false, hintUsed=false;
+const $=id=>document.getElementById(id);
+function shuffle(arr){return arr.map(v=>[Math.random(),v]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);}
+function startGame(){order=shuffle([...questions]);index=0;score=0;answered=false;hintUsed=false;$("score").textContent=score;$("quiz").hidden=false;$("result").hidden=true;renderQuestion();}
+function renderQuestion(){
+ const item=order[index];answered=false;hintUsed=false;
+ $("number").textContent=(index+1)+"/"+order.length;
+ $("bar").style.width=(index/order.length*100)+"%";
+ $("question").textContent=(index+1)+". "+item.q;
+ $("answers").innerHTML="";$("feedback").textContent="Pilih jawaban yang menurutmu paling tepat. Semangat! 🌟";
+ $("next").disabled=true;$("next").textContent=index===order.length-1?"Lihat Hasil 🏆":"Soal Berikutnya ➜";
+ item.a.forEach((answer,i)=>{const b=document.createElement("button");b.className="answer";b.textContent=String.fromCharCode(65+i)+". "+answer;b.addEventListener("click",()=>choose(i));$("answers").appendChild(b);});
+}
+function choose(choice){
+ if(answered)return;answered=true;const item=order[index];const buttons=[...$("answers").children];
+ buttons.forEach((b,i)=>{b.disabled=true;if(i===item.c)b.classList.add("correct");if(i===choice&&choice!==item.c)b.classList.add("wrong");});
+ if(choice===item.c){score+=hintUsed?5:10;$("feedback").textContent="🎉 Tepat sekali! "+item.e;}else{$("feedback").textContent="Belum tepat, tidak apa-apa! "+item.e;}
+ $("score").textContent=score;$("next").disabled=false;
+}
+$("hint").addEventListener("click",()=>{if(answered||hintUsed)return;hintUsed=true;$("feedback").textContent="💡 Petunjuk: "+order[index].e.split(".")[0]+". Skor untuk jawaban benar pada soal ini menjadi 5 poin.";});
+$("next").addEventListener("click",()=>{if(!answered)return;index++;if(index<order.length){renderQuestion();}else{finish();}});
+function finish(){$("quiz").hidden=true;$("result").hidden=false;$("bar").style.width="100%";$("finalscore").textContent=score+"/100";$("message").textContent=score>=90?"Luar biasa! Kamu sudah menjadi master aljabar! 🌟":score>=70?"Hebat! Pemahamanmu sudah bagus. Terus berlatih, ya! 💪":score>=50?"Bagus, kamu sudah berusaha. Baca kembali materi dan coba lagi! 📚":"Jangan menyerah! Pelajari kembali materi, lalu mulai tantangan baru. 🚀";}
+$("restart").addEventListener("click",startGame);
+document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b===btn));document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("active",p.id===btn.dataset.tab));}));
+startGame();
+</script>
+</body>
+</html>
